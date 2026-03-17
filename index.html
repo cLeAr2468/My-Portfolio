@@ -410,7 +410,7 @@
                 <p class="text-gray-300 text-lg">Ready to contribute and grow in the IT industry</p>
             </div>
             <div class="border-t border-gray-700 pt-6">
-                <p class="text-gray-400">&copy; 2024 Jerald C. Reyes. All rights reserved.</p>
+                <p class="text-gray-400">&copy; <span id="current-year"></span> Jerald C. Reyes. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -425,6 +425,9 @@
             once: true,
             offset: 100
         });
+
+        // Auto-update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Add smooth scrolling behavior
         document.documentElement.style.scrollBehavior = 'smooth';
