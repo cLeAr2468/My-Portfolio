@@ -215,8 +215,53 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        My Portfolio
+                    </h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">About</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Education</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Skills</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+                    <a href="#references" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-medium">References</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">Home</a>
+                    <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">About</a>
+                    <a href="#education" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">Education</a>
+                    <a href="#skills" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">Skills</a>
+                    <a href="#experience" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">Experience</a>
+                    <a href="#references" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-300">References</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Header Section -->
-    <header class="bg-gradient-to-br from-primary via-secondary to-purple-700 text-white py-20 px-4 relative overflow-hidden">
+    <header id="home" class="bg-gradient-to-br from-primary via-secondary to-purple-700 text-white py-20 px-4 relative overflow-hidden mt-16">
         <!-- Modern Background Design -->
         <div class="absolute inset-0 overflow-hidden">
             <!-- Animated Wave Background -->
@@ -251,14 +296,14 @@
         
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-duration="1000">
-                <!-- Profile Image Placeholder -->
-                <div class="w-36 h-36 md:w-48 md:h-48 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border-4 border-white/30 shadow-2xl pulse-glow" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-user text-5xl md:text-6xl text-white/90"></i>
+                <!-- Profile Image -->
+                <div class="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden backdrop-blur-sm border-4 border-white/30 shadow-2xl pulse-glow" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="imgs1.png" alt="Jerald C. Reyes Profile Picture" class="w-full h-full object-cover">
                 </div>
                 
                 <!-- Personal Info -->
                 <div class="text-center md:text-left flex-1" data-aos="fade-left" data-aos-delay="400">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text bg-white bg-clip-text text-transparent">JERALD C. REYES</h1>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white bg-white bg-clip-text text-transparent">JERALD C. REYES</h1>
                     <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">IT Graduate & Aspiring Developer</p>
                     
                     <!-- Contact Info -->
@@ -284,7 +329,7 @@
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-12">
         <!-- About Me Section -->
-        <section class="mb-16">
+        <section id="about" class="mb-16">
             <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-8 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -303,7 +348,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
         </section>
 
         <!-- Education Section -->
-        <section class="mb-16">
+        <section id="education" class="mb-16">
             <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -324,37 +369,12 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                             <span class="text-sm md:text-base text-white bg-gradient-to-r from-primary to-secondary px-4 py-2 rounded-full font-medium shadow-lg">S.Y 2024-2025</span>
                         </div>
                     </div>
-                    
-                    <!-- Senior High School -->
-                    <div class="border-l-4 border-accent pl-8 relative" data-aos="fade-right" data-aos-delay="400">
-                        <div class="absolute -left-3 top-0 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4">
-                            <div class="flex-1">
-                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Senior High School</h3>
-                                <p class="text-accent font-semibold text-lg mb-1">Clarencio Calagos Memorial School of Fisheries</p>
-                                <p class="text-gray-600 italic">(Computer System Servicing)</p>
-                            </div>
-                            <span class="text-sm md:text-base text-white bg-gradient-to-r from-accent to-orange-500 px-4 py-2 rounded-full font-medium shadow-lg">S.Y 2021-2022</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Elementary -->
-                    <div class="border-l-4 border-green-500 pl-8 relative" data-aos="fade-right" data-aos-delay="600">
-                        <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4">
-                            <div class="flex-1">
-                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Elementary</h3>
-                                <p class="text-green-600 font-semibold text-lg">Inoraguiao Elementary School</p>
-                            </div>
-                            <span class="text-sm md:text-base text-white bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 rounded-full font-medium shadow-lg">S.Y 2014-2015</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="mb-16">
+        <section id="skills" class="mb-16">
             <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -435,7 +455,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
         </section>
 
         <!-- Experience Section -->
-        <section class="mb-16">
+        <section id="experience" class="mb-16">
             <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -445,8 +465,31 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                 </h2>
                 
                 <div class="space-y-8">
+                    <!-- Current Position -->
+                    <div class="border-l-4 border-green-500 pl-8 relative" data-aos="fade-right" data-aos-delay="200">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
+                            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-3">
+                                    <i class="fas fa-briefcase text-green-600"></i>
+                                    Accounting System & IT Specialist
+                                </h3>
+                            </div>
+                            <p class="text-green-600 font-bold text-lg mb-3">Private Company</p>
+                            <div class="space-y-2 text-gray-700">
+                                <p class="text-lg flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 text-sm"></i>
+                                    Company system support (software & hardware)
+                                </p>
+                                <p class="text-lg flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 text-sm"></i>
+                                    Troubleshooting and resolving technical issues
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- OJT Experience -->
-                    <div class="border-l-4 border-primary pl-8 relative" data-aos="fade-right" data-aos-delay="200">
+                    <div class="border-l-4 border-primary pl-8 relative" data-aos="fade-right" data-aos-delay="300">
                         <div class="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
                         <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
                             <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 flex items-center gap-3">
@@ -475,7 +518,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
         </section>
 
         <!-- References Section -->
-        <section class="mb-16">
+        <section id="references" class="mb-16">
             <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -546,6 +589,74 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
 
         // Add smooth scrolling behavior
         document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-primary', 'font-bold');
+                }
+            });
+
+            // Navbar background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/98', 'shadow-xl');
+                navbar.classList.remove('bg-white/95');
+            } else {
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/98', 'shadow-xl');
+            }
+        });
 
         // Add intersection observer for additional animations
         const observerOptions = {
