@@ -12,9 +12,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3B82F6',
-                        secondary: '#1E40AF',
-                        accent: '#F59E0B'
+                        primary: '#3C3C3C',
+                        secondary: '#2A2A2A',
+                        accent: '#8B8B8B',
+                        light: '#F5F5F5',
+                        lighter: '#E8E8E8',
+                        background: '#E8DDD4'
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.6s ease-out',
@@ -109,7 +112,7 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #3B82F6, #1E40AF);
+            background: linear-gradient(135deg, #3C3C3C, #2A2A2A);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -130,7 +133,7 @@
         
         .particle {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(60, 60, 60, 0.1);
             border-radius: 50%;
             animation: particle-float 6s ease-in-out infinite;
         }
@@ -148,9 +151,9 @@
         
         .geometric-shape {
             position: absolute;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            background: linear-gradient(45deg, rgba(60,60,60,0.1), rgba(42,42,42,0.05));
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(60,60,60,0.1);
         }
         
         .rotate-slow {
@@ -185,11 +188,11 @@
         
         @keyframes pulse-glow {
             0%, 100% {
-                box-shadow: 0 0 20px rgba(255,255,255,0.1);
+                box-shadow: 0 0 20px rgba(60,60,60,0.1);
                 transform: scale(1);
             }
             50% {
-                box-shadow: 0 0 40px rgba(255,255,255,0.2);
+                box-shadow: 0 0 40px rgba(60,60,60,0.2);
                 transform: scale(1.05);
             }
         }
@@ -200,7 +203,7 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%);
+            background: linear-gradient(90deg, rgba(60,60,60,0.1) 0%, rgba(42,42,42,0.05) 50%, rgba(60,60,60,0.1) 100%);
             animation: wave-motion 8s ease-in-out infinite;
         }
         
@@ -214,7 +217,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-background text-gray-800">
     <!-- Navigation Header -->
     <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300" id="navbar">
         <div class="max-w-6xl mx-auto px-4">
@@ -261,7 +264,7 @@
     </nav>
 
     <!-- Header Section -->
-    <header id="home" class="bg-gradient-to-br from-primary via-secondary to-purple-700 text-white py-20 px-4 relative overflow-hidden mt-16">
+    <header id="home" class="bg-gradient-to-br from-primary via-secondary to-gray-800 text-white py-20 px-4 relative overflow-hidden mt-16">
         <!-- Modern Background Design -->
         <div class="absolute inset-0 overflow-hidden">
             <!-- Animated Wave Background -->
@@ -281,11 +284,11 @@
             <div class="particle w-2 h-2 absolute top-40 left-2/3" style="animation-delay: 5s;"></div>
             
             <!-- Glowing Orbs -->
-            <div class="absolute top-16 right-16 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full pulse-glow"></div>
-            <div class="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-purple-400/15 to-pink-400/15 rounded-full pulse-glow" style="animation-delay: 2s;"></div>
+            <div class="absolute top-16 right-16 w-32 h-32 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full pulse-glow"></div>
+            <div class="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full pulse-glow" style="animation-delay: 2s;"></div>
             
             <!-- Grid Pattern Overlay -->
-            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, rgba(60,60,60,0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
             
             <!-- Diagonal Lines -->
             <div class="absolute top-0 left-0 w-full h-full">
@@ -304,21 +307,21 @@
                 <!-- Personal Info -->
                 <div class="text-center md:text-left flex-1" data-aos="fade-left" data-aos-delay="400">
                     <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white bg-white bg-clip-text text-transparent">JERALD C. REYES</h1>
-                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">IT Graduate & Aspiring Developer</p>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">IT Graduate & Aspiring Developer</p>
                     
                     <!-- Contact Info -->
                     <div class="space-y-3 text-sm md:text-base">
-                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-blue-200 transition-colors" data-aos="fade-up" data-aos-delay="600">
-                            <i class="fas fa-envelope w-5 text-blue-300"></i>
+                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-gray-100 transition-colors" data-aos="fade-up" data-aos-delay="600">
+                            <i class="fas fa-envelope w-5 text-gray-300"></i>
                             <span>reyesjerald638@gmail.com</span>
                         </div>
-                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-blue-200 transition-colors" data-aos="fade-up" data-aos-delay="700">
-                            <i class="fas fa-phone w-5 text-blue-300"></i>
+                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-gray-100 transition-colors" data-aos="fade-up" data-aos-delay="700">
+                            <i class="fas fa-phone w-5 text-gray-300"></i>
                             <span>09636829761</span>
                         </div>
-                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-blue-200 transition-colors" data-aos="fade-up" data-aos-delay="800">
-                            <i class="fas fa-map-marker-alt w-5 text-blue-300"></i>
-                            <span>Purok 2, Brgy. Inoraguiao Sta. Margarita Samar</span>
+                        <div class="flex items-center justify-center md:justify-start gap-3 hover:text-gray-100 transition-colors" data-aos="fade-up" data-aos-delay="800">
+                            <i class="fas fa-map-marker-alt w-5 text-gray-300"></i>
+                            <span>Sta. Margarita Samar</span>
                         </div>
                     </div>
                 </div>
@@ -330,7 +333,7 @@
     <main class="max-w-6xl mx-auto px-4 py-12">
         <!-- About Me Section -->
         <section id="about" class="mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
+            <div class="bg-light rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-8 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                         <i class="fas fa-user-circle text-white text-xl"></i>
@@ -349,7 +352,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
 
         <!-- Education Section -->
         <section id="education" class="mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
+            <div class="bg-light rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                         <i class="fas fa-graduation-cap text-white text-xl"></i>
@@ -375,7 +378,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
 
         <!-- Skills Section -->
         <section id="skills" class="mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
+            <div class="bg-light rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                         <i class="fas fa-code text-white text-xl"></i>
@@ -388,34 +391,48 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                     <div data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                             <i class="fas fa-laptop-code text-primary"></i>
-                            Programming Languages
+                            Front-End Development
                         </h3>
-                        <p class="text-gray-700 mb-6 text-lg">Basic knowledge of the following programming languages:</p>
-                        
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                            <div class="skill-card bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="300">
-                                <i class="fab fa-react text-3xl text-blue-600 mb-3"></i>
-                                <h4 class="font-semibold text-blue-800">React JS</h4>
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fab fa-react text-3xl text-primary mb-3"></i>
+                                <h4 class="font-semibold text-primary">React.JS</h4>
+                            </div>                                     
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fas fa-wind text-3xl text-secondary mb-3"></i>
+                                <h4 class="font-semibold text-secondary">Tailwind CSS</h4>
                             </div>
                             
-                            <div class="skill-card bg-gradient-to-br from-green-50 to-green-100 border border-green-200 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="400">
-                                <i class="fab fa-node-js text-3xl text-green-600 mb-3"></i>
-                                <h4 class="font-semibold text-green-800">Node JS</h4>
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fab fa-php text-3xl text-primary mb-3"></i>
+                                <h4 class="font-semibold text-primary">HTML</h4>
                             </div>
                             
-                            <div class="skill-card bg-gradient-to-br from-cyan-50 to-cyan-100 border border-cyan-200 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="500">
-                                <i class="fas fa-wind text-3xl text-cyan-600 mb-3"></i>
-                                <h4 class="font-semibold text-cyan-800">Tailwind CSS</h4>
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fab fa-css3-alt text-3xl text-secondary mb-3"></i>
+                                <h4 class="font-semibold text-secondary">CSS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                            <i class="fas fa-laptop-code text-primary"></i>
+                            Back-End Development
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">                          
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fab fa-node-js text-3xl text-secondary mb-3"></i>
+                                <h4 class="font-semibold text-secondary">Node JS</h4>
+                            </div>
+                               
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fab fa-php text-3xl text-primary mb-3"></i>
+                                <h4 class="font-semibold text-primary">PHP</h4>
                             </div>
                             
-                            <div class="skill-card bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="600">
-                                <i class="fab fa-php text-3xl text-purple-600 mb-3"></i>
-                                <h4 class="font-semibold text-purple-800">PHP</h4>
-                            </div>
-                            
-                            <div class="skill-card bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="700">
-                                <i class="fab fa-css3-alt text-3xl text-orange-600 mb-3"></i>
-                                <h4 class="font-semibold text-orange-800">CSS</h4>
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fab fa-laravel text-3xl text-secondary mb-3"></i>
+                                <h4 class="font-semibold text-secondary">Laravel</h4>
                             </div>
                         </div>
                     </div>
@@ -429,23 +446,23 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                         <p class="text-gray-700 mb-6 text-lg">Basic knowledge of the following:</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="skill-card bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-6 rounded-xl flex items-center gap-4" data-aos="fade-right" data-aos-delay="600">
-                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-6 rounded-xl flex items-center gap-4" data-aos="fade-right" data-aos-delay="600">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
                                     <i class="fas fa-database text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-blue-800 text-lg">MySQL</h4>
-                                    <p class="text-blue-600 text-sm">Relational Database</p>
+                                    <h4 class="font-bold text-primary text-lg">MySQL</h4>
+                                    <p class="text-accent text-sm">Relational Database</p>
                                 </div>
                             </div>
                             
-                            <div class="skill-card bg-gradient-to-br from-red-50 to-red-100 border border-red-200 p-6 rounded-xl flex items-center gap-4" data-aos="fade-left" data-aos-delay="700">
-                                <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                            <div class="skill-card bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-6 rounded-xl flex items-center gap-4" data-aos="fade-left" data-aos-delay="700">
+                                <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
                                     <i class="fas fa-server text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-red-800 text-lg">SQL Server</h4>
-                                    <p class="text-red-600 text-sm">Microsoft Database</p>
+                                    <h4 class="font-bold text-secondary text-lg">SQL Server</h4>
+                                    <p class="text-accent text-sm">Microsoft Database</p>
                                 </div>
                             </div>
                         </div>
@@ -456,7 +473,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
 
         <!-- Experience Section -->
         <section id="experience" class="mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
+            <div class="bg-light rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                         <i class="fas fa-briefcase text-white text-xl"></i>
@@ -468,7 +485,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                     <!-- Current Position -->
                     <div class="border-l-4 border-green-500 pl-8 relative" data-aos="fade-right" data-aos-delay="200">
                         <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
+                        <div class="bg-gradient-to-r from-lighter to-gray-200 p-6 rounded-xl border border-gray-300">
                             <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-4">
                                 <h3 class="text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-3">
                                     <i class="fas fa-briefcase text-green-600"></i>
@@ -519,7 +536,7 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
 
         <!-- References Section -->
         <section id="references" class="mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
+            <div class="bg-light rounded-xl shadow-xl p-8 md:p-10 section-card" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-10 flex items-center gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                         <i class="fas fa-users text-white text-xl"></i>
@@ -529,29 +546,29 @@ I am highly adaptable, a fast learner, and committed to delivering quality work 
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Reference 1 -->
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-6 rounded-xl skill-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-6 rounded-xl skill-card" data-aos="fade-right" data-aos-delay="200">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                                 <i class="fas fa-user text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-800">Zaldee Niño Tan</h3>
                         </div>
                         <div class="flex items-center gap-3 text-gray-700">
-                            <i class="fas fa-envelope text-blue-600"></i>
+                            <i class="fas fa-envelope text-primary"></i>
                             <span class="text-sm md:text-base">zn.tan@nwssu.edu.ph</span>
                         </div>
                     </div>
                     
                     <!-- Reference 2 -->
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 p-6 rounded-xl skill-card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-lighter to-gray-200 border border-gray-300 p-6 rounded-xl skill-card" data-aos="fade-left" data-aos-delay="400">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
                                 <i class="fas fa-user text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-800">Clint Anthony Nueva</h3>
                         </div>
                         <div class="flex items-center gap-3 text-gray-700">
-                            <i class="fas fa-envelope text-green-600"></i>
+                            <i class="fas fa-envelope text-secondary"></i>
                             <span class="text-sm md:text-base">clintanthony.nueva@nwssu.edu.ph</span>
                         </div>
                     </div>
